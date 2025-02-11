@@ -1,9 +1,16 @@
-{% extends "ecommerce/base.html" %}
 
+{% extends "ecommerce/base.html" %}
+{% load static %}
 {% block title %}Home{% endblock %}
 
 {% block content %}
-{% include "ecommerce/full_width_video.html" %}
+
+<div class="full-width-video">
+    <video autoplay muted loop id="background-video">
+        <source src="{% static 'ecommerce/videos/background.mp4' %}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
 <h1>Welcome to Our E-commerce Site!</h1>
 <p>This is the home page.</p>
 {% endblock %}
